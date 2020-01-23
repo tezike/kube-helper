@@ -1,0 +1,8 @@
+# Values to run the grafana setup with
+sidecar:
+  datasources:
+    enabled: true
+    label: grafana_datasource
+  dashboards:
+    enabled: true
+    label: grafana_dashboard
