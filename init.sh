@@ -10,6 +10,8 @@ kubectl apply -f grafana/config.yml
 
 helm install stable/grafana -f grafana/values.yml --namespace monitoring --name grafana
 
+kubectl create secret tls wildcard-certificate-tls -n dev --key="privkey.pem" --cert="fullchain.pem"
+
 # Exposes grana to external source 
 kubectl apply -f grafana/ingress.yml
 
