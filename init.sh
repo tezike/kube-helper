@@ -4,7 +4,6 @@ kubectl apply -f helm/tiller.yaml
 helm init --service-account tiller --wait
 
 kubectl apply -f namespace.yml
-helm install stable/prometheus --namespace monitoring --name prometheus
 
 kubectl apply -f grafana/config.yml
 
