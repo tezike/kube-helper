@@ -26,3 +26,7 @@ helm install --name xend-broker-svc --namespace production --set rabbitmqUsernam
 --set rabbitmqErlangCookie=secretcookie \
 --set rabbitmqErlangCookie=secretcookie --set rbacEnabled=true --set service.type=NodePort --set ingress.enabled=true \
 --set ingress.hostName="devbroker.xen.c" --set ingress.tls=true --set ingress.tlsSecret="wildcard-certificate-tls" stable/rabbitmq-ha
+
+# kubeseal
+kubectl apply -f https://github.com/bitnami-labs/sealed-secrets/releases/download/v0.7.0/controller.yaml
+kubectl apply -f https://github.com/bitnami-labs/sealed-secrets/releases/download/v0.7.0/sealedsecret-crd.yaml
