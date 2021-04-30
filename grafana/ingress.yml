@@ -8,10 +8,10 @@ metadata:
 spec:
   tls:
   - hosts:
-      - grafana.xend.tk
+      - grafana.geena.live
     secretName: wildcard-certificate-tls
   rules:
-  - host: grafana.xend.tk
+  - host: grafana.geena.live
     http:
       paths:
       - backend:
